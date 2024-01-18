@@ -52,25 +52,24 @@ export const useSignUp = () => {
     }
   };
   const handleSignUp = () => {
-    let month = `${dateValue.month}`;
-    let day = `${dateValue.day}`;
-    if (dateValue.month < 10) {
-      month = `0${dateValue.month}`;
-    }
-    if (dateValue.day < 10) {
-      day = `0${dateValue.day}`;
-    }
-    signUpValue.birth = `${dateValue.year}-${month}-${day}`;
     if (
       isSameLogin === 1 &&
       isCorrectAddress === true &&
       checkPassword === signUpValue.password &&
       signUpValue.login !== "" &&
       signUpValue.password !== "" &&
-      signUpValue.birth !== "" &&
       signUpValue.mainAddress !== "" &&
       signUpValue.subAddress !== ""
     ) {
+      let month = `${dateValue.month}`;
+      let day = `${dateValue.day}`;
+      if (dateValue.month < 10) {
+        month = `0${dateValue.month}`;
+      }
+      if (dateValue.day < 10) {
+        day = `0${dateValue.day}`;
+      }
+      signUpValue.birth = `${dateValue.year}-${month}-${day}`;
       if (passwordRegEx.test(signUpValue.password) === false) {
         alert("비밀번호는 8~20자의 영문 대소문자, 숫자로만 입력해주세요.");
         return;

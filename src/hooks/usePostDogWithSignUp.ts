@@ -2,7 +2,6 @@ import { useState } from "react";
 import { PostDogInputType } from "../types/sign";
 import { CheckRegisterNum, PostDogWithSignUp } from "../apis/DogApi";
 import { DateType } from "../types/date";
-import { useNavigate } from "react-router-dom";
 import AWS from "aws-sdk";
 window.AWS = AWS;
 export const usePostDogWithSignUp = () => {
@@ -18,7 +17,6 @@ export const usePostDogWithSignUp = () => {
     secretAccessKey: config.secretAccessKey,
   });
   const s3 = new AWS.S3();
-  const navigate = useNavigate();
   const [file, setFile] = useState<File | null>(null);
   const [postDogValue, setPostDogValue] = useState<PostDogInputType>({
     image: "",
@@ -110,6 +108,17 @@ export const usePostDogWithSignUp = () => {
     });
   };
   const handlePostDog = async () => {
+    if (
+      isCorrectRegisterNum !== 1 ||
+      postDogValue.image === "" ||
+      postDogValue.name === "" ||
+      postDogValue.tags.length === 0 ||
+      postDogValue.type === "" ||
+      postDogValue.tags.length === 0
+    ) {
+      alert("모든 정보를 입력해주세요.");
+      return;
+    }
     const id = localStorage.getItem("id");
     if (id) {
       postDogValue.image = await upLoadS3();
@@ -125,7 +134,7 @@ export const usePostDogWithSignUp = () => {
       PostDogWithSignUp(id, postDogValue)
         .then((res) => {
           alert("강아지 등록이 완료되었습니다.");
-          navigate("/postdog");
+          window.location.reload();
           console.log(res);
         })
         .catch((err) => {
@@ -134,6 +143,17 @@ export const usePostDogWithSignUp = () => {
     }
   };
   const handlePostDogFinish = async () => {
+    if (
+      isCorrectRegisterNum !== 1 ||
+      postDogValue.image === "" ||
+      postDogValue.name === "" ||
+      postDogValue.tags.length === 0 ||
+      postDogValue.type === "" ||
+      postDogValue.tags.length === 0
+    ) {
+      alert("모든 정보를 입력해주세요.");
+      return;
+    }
     const id = localStorage.getItem("id");
     if (id) {
       postDogValue.image = await upLoadS3();
