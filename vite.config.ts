@@ -10,4 +10,7 @@ export default defineConfig({
   optimizeDeps: {
     disabled: false,
   },
+  define: {
+    global: {},
+  },
 });
