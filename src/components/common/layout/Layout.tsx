@@ -18,7 +18,7 @@ export const Layout = (props: LayoutProps) => {
       {
         headers: {
           Authorization: `${localStorage.getItem("accessToken")}`,
-          Connetction: "keep-alive",
+          Connection: "keep-alive",
           Accept: "text/event-stream",
         },
         heartbeatTimeout: 86400000,
