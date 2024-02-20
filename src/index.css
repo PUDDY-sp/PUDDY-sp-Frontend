@@ -30,8 +30,8 @@ body {
   width: 393px;
   height: 777px;
   border-radius: 8px;
-  outline: 1px solid #000000;
   margin-top: 1px;
+  background-color: #ffffff;
 }
 
 h1 {
