@@ -4,7 +4,6 @@ import { WalkRoadType } from "../types/walkRoad.ts";
 export const handleWalkRoadRoute = async (road: WalkRoadType) => {
   try {
     const response = await GetWalkRoadRoute(road);
-    console.log("FeatureCollection Data : ", response.data);
     return response.data;
   } catch (e) {
     console.error(e);

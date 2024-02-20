@@ -37,7 +37,7 @@ export const PostDogTemplate = (props: PostDogProps) => {
         {props.postDogValue.image === "" ? (
           <div
             className="bg-cover w-36 h-36"
-            style={{ backgroundImage: `url(../../../public/inputImage.svg)` }}
+            style={{ backgroundImage: `url(/inputImage.svg)` }}
           >
             <input
               type="file"

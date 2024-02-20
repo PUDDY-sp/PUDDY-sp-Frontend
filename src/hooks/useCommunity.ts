@@ -34,7 +34,6 @@ export const useCommunity = () => {
   const handleWritePost = (postInputType: PostInputType) => {
     postCreatePost(postInputType)
       .then((res) => {
-        console.log(res.data);
       })
       .catch((err) => {
         if (err.response.status === 403) {

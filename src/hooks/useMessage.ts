@@ -90,7 +90,6 @@ export const useMessage = () => {
       getChatDetail(Number(chatId))
         .then((res) => {
           setChatDetailValue(res.data);
-          console.table(res.data);
           connect();
         })
         .catch((err) => {

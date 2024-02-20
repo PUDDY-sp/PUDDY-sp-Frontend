@@ -29,7 +29,6 @@ export const useTrailList = () => {
     GetTrailReviewList(trailIdNumber, page)
       .then((res) => {
         setTrailList(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -44,9 +43,7 @@ export const useTrailList = () => {
     trailReviewInputType: TrailReviewInputType
   ) => {
     PostTrailReview(trailIdNumber, trailReviewInputType)
-      .then((res) => {
-        console.log(res.data);
-      })
+      .then((res) => {})
       .catch((err) => {
         if (err.response.status === 403) {
           getReissueToken("/trail");

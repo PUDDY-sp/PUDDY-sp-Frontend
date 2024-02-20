@@ -6,7 +6,7 @@ interface TagListProps {
 }
 export const TagList = (props: TagListProps) => {
   return (
-    <div className="w-full flex flex-wrap mb-1">
+    <div className="w-full flex flex-wrap">
       {props.tags.map((tag, index) => (
         <Tag key={index} content={tag.content} />
       ))}

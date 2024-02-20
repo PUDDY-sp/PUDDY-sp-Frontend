@@ -69,7 +69,6 @@ export const useMyPage = () => {
         getReissueToken("/mypage");
       }
     });
-    console.log(localStorage.getItem("accessToken"));
   }, []);
 
   return {

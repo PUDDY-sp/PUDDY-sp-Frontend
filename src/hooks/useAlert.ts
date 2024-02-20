@@ -15,7 +15,6 @@ export const useAlert = () => {
   useEffect(() => {
     getMatch()
       .then((res) => {
-        console.log(res.data);
         setAlertValue(res.data);
       })
       .catch((err) => {
@@ -27,7 +26,6 @@ export const useAlert = () => {
   const goToProfile = (personId: number) => {
     setPersonId(personId);
     navigate("/wholike");
-    console.log(personId);
   };
 
   return { alertValue, goToProfile };

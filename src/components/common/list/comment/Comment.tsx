@@ -19,7 +19,6 @@ export const Comment = (props: CommentProps) => {
   };
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => {
-    console.log();
     setIsOpen(true);
   };
   const closeModal = () => {

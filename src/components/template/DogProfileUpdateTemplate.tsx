@@ -41,7 +41,7 @@ export const DogProfileUpdateTemplate = (props: DogProfileUpdateProps) => {
               <div
                 className="w-10 h-10 rounded-full text-fontBlack text-default cursor-pointer"
                 style={{
-                  backgroundImage: `url(../../../public/DogPencil.svg)`,
+                  backgroundImage: `url(/DogPencil.svg)`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}

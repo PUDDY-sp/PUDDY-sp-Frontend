@@ -80,7 +80,6 @@ export const useMatch = () => {
     postmatch(personId)
       .then((res) => {
         alert("매칭신청을 전송하였습니다.");
-        console.log(res);
       })
       .catch((err) => {
         if (err.response.status === 403) {
