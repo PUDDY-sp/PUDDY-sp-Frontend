@@ -24,6 +24,7 @@ export const PostDog = (postDogInputType: PostDogInputType) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };

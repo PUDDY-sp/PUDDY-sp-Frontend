@@ -25,8 +25,7 @@ export const useMyPage = () => {
   const logout = () => {
     logOut()
       .then(() => {
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("refreshToken");
+        localStorage.clear();
         alert("로그아웃 되었습니다.");
         navigate("/");
       })
@@ -70,6 +69,7 @@ export const useMyPage = () => {
         getReissueToken("/mypage");
       }
     });
+    console.log(localStorage.getItem("accessToken"));
   }, []);
 
   return {

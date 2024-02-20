@@ -6,6 +6,7 @@ export const postCreatePost = (postInputType: PostInputType) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -15,6 +16,7 @@ export const patchPost = (postId: number, postInputType: PostInputType) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -24,6 +26,7 @@ export const deletePost = (postId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -36,6 +39,7 @@ export const postLikePost = (postId: number) => {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("accessToken"),
+        withCredentials: true,
       },
     }
   );
@@ -49,6 +53,7 @@ export const getPostList = (pageNum: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -58,6 +63,7 @@ export const getPostDetail = (postId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -70,6 +76,7 @@ export const postComment = (postId: number, content: string) => {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("accessToken"),
+        withCredentials: true,
       },
     }
   );
@@ -87,6 +94,7 @@ export const patchComment = (
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("accessToken"),
+        withCredentials: true,
       },
     }
   );
@@ -97,6 +105,7 @@ export const deleteComment = (postId: number, commentId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };

@@ -8,6 +8,7 @@ export const GetTrailReviewList = (trailId: number, pageNum: number) => {
     },
     headers: {
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -23,6 +24,7 @@ export const PostTrailReview = (
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("accessToken"),
+        withCredentials: true,
       },
     }
   );
@@ -32,6 +34,7 @@ export const DeleteTrailReview = (trailId: number, reviewId: number) => {
   return apiClient.delete(`/api/trail/${trailId}/review/${reviewId}`, {
     headers: {
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };

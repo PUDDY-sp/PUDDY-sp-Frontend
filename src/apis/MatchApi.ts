@@ -11,6 +11,7 @@ export const getRandomMatch = (filter: FilterDogType) => {
     },
     headers: {
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -23,6 +24,7 @@ export const postmatch = (personId: number) => {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("accessToken"),
+        withCredentials: true,
       },
     }
   );
@@ -32,6 +34,7 @@ export const getMatch = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
@@ -40,6 +43,7 @@ export const getPersonDetail = (personId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };

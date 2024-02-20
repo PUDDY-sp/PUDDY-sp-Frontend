@@ -9,12 +9,13 @@ export const GetRecommendWalkRoad = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
+      withCredentials: true,
     },
   });
 };
 
 export const GetWalkRoadRoute = (
-  road: WalkRoadType,
+  road: WalkRoadType
 ): Promise<AxiosResponse<FeatureCollection>> => {
   return apiTmap.post(
     `tmap/routes/pedestrian?version=1&format=json&appKey=${import.meta.env.VITE_TMAP_API_KEY}`,
@@ -32,6 +33,6 @@ export const GetWalkRoadRoute = (
       headers: {
         "Content-Type": "application/json",
       },
-    },
+    }
   );
 };
