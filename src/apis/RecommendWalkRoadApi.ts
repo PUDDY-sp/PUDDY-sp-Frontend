@@ -9,7 +9,6 @@ export const GetRecommendWalkRoad = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };

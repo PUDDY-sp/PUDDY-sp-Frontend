@@ -9,7 +9,6 @@ export const getMyPage = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -19,7 +18,6 @@ export const patchProfile = (profile: UpdateProfileInputType) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -29,7 +27,6 @@ export const getUserInfo = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -39,7 +36,6 @@ export const getDogInfo = (dogId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -49,7 +45,6 @@ export const patchMainDog = (dogId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -59,7 +54,6 @@ export const patchDog = (dogId: number, dog: UpdateDogProfileInputType) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -69,7 +63,6 @@ export const deleteDog = (dogId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -80,7 +73,6 @@ export const logOut = () => {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
       ReAuthorization: localStorage.getItem("refreshToken"),
-      withCredentials: true,
     },
   });
 };

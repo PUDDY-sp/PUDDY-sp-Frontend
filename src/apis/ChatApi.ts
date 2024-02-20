@@ -5,7 +5,6 @@ export const getChatList = () => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -14,7 +13,6 @@ export const getChatDetail = (chatId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };
@@ -24,7 +22,6 @@ export const deleteChat = (chatId: number) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("accessToken"),
-      withCredentials: true,
     },
   });
 };

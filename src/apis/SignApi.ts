@@ -22,7 +22,6 @@ export const ReissueToken = () => {
     headers: {
       Authorization: localStorage.getItem("accessToken"),
       Reauthorization: localStorage.getItem("refreshToken"),
-      withCredentials: true,
     },
   });
 };
