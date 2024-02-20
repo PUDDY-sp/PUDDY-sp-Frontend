@@ -43,7 +43,7 @@ export const useTrailList = () => {
     trailReviewInputType: TrailReviewInputType
   ) => {
     PostTrailReview(trailIdNumber, trailReviewInputType)
-      .then((res) => {})
+      .then(() => {})
       .catch((err) => {
         if (err.response.status === 403) {
           getReissueToken("/trail");

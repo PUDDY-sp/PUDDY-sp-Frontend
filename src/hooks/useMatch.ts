@@ -78,8 +78,9 @@ export const useMatch = () => {
   };
   const handlepostMatch = useCallback((personId: number) => {
     postmatch(personId)
-      .then((res) => {
+      .then(() => {
         alert("매칭신청을 전송하였습니다.");
+
       })
       .catch((err) => {
         if (err.response.status === 403) {
