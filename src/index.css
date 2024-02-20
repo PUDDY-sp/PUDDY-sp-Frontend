@@ -6,7 +6,7 @@
   line-height: 1.5;
   font-weight: 400;
   height: 777px;
-  color-scheme: light dark;
+  color-scheme: light;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   font-synthesis: none;
@@ -29,7 +29,6 @@ body {
   place-items: center;
   width: 393px;
   height: 777px;
-  border-radius: 8px;
   margin-top: 1px;
   background-color: #ffffff;
 }

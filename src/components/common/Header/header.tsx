@@ -29,10 +29,10 @@ export const Header = (titleObject: Title) => {
   const trailIdNumber = Number(trailId);
 
   return (
-    <div className="flex px-4 w-full h-16 px-1 py-2 items-center gap-1 shrink-0">
+    <div className="flex px-4 w-full h-16 px-1 py-2 items-center gap-1 shrink-0 text-fontBlack">
       {modalOpen && (
         <div
-          className="w-393 h-donHave fixed top-0 left-0 bg-black bg-opacity-70 z-50 flex justify-center items-center"
+          className="w-393 h-donHave fixed top-0 left-0 bg-black bg-opacity-70 z-50 flex justify-center items-center text-fontBlack"
           ref={modalBackground}
           onClick={(e) => {
             if (e.target === modalBackground.current) {
@@ -40,7 +40,7 @@ export const Header = (titleObject: Title) => {
             }
           }}
         >
-          <div className="w-80 h-340 bg-bgWhite flex flex-col items-start justify-center rounded-xl">
+          <div className="w-80 h-360 bg-bgWhite flex flex-col items-start justify-center rounded-xl">
             <div className="flex w-full flex-col px-4">
               <SignUpMiddleTitle text={"견종"} />
               <SelectDogType
@@ -87,7 +87,7 @@ export const Header = (titleObject: Title) => {
         </div>
       )}
       {titleObject.title !== "강아지 매칭" && (
-        <div className="flex justify-center items-center gap-2.5 ">
+        <div className="flex justify-center items-center gap-2.5 text-fontBlack">
           <div
             className="flex justify-center items-center gap-2.5"
             onClick={() => handleBack()}
@@ -101,7 +101,7 @@ export const Header = (titleObject: Title) => {
       </p>
       {titleObject.title === "강아지 매칭" && (
         <>
-          <div className="flex justify-center items-center px-2 gap-2.5">
+          <div className="flex justify-center items-center px-2 gap-2.5 text-fontBlack">
             <img
               src={filters}
               className="w-6 h-6"
@@ -130,7 +130,7 @@ export const Header = (titleObject: Title) => {
       {titleObject.title === "산책로 후기" && (
         <>
           <div
-            className="flex justify-center items-center gap-2.5"
+            className="flex justify-center items-center gap-2.5 text-fontBlack"
             onClick={() => handleWriteTrail(trailIdNumber)}
           >
             <img src={plus} className="w-6 h-6" alt="alert" />

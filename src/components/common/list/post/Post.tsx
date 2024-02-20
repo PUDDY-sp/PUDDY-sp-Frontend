@@ -26,11 +26,13 @@ export const Post = (props: PostProps) => {
           />
           <div className="ml-1 flex flex-col justify-start items-start flex-1">
             <div className="h-6 text-ellipsis overflow-hidden">
-              <p className="text-default text-start mt-0.5">{props.title}</p>
+              <p className="text-default text-start text-fontBlack mt-0.5">
+                {props.title}
+              </p>
             </div>
 
             <div className="flex min-h-10 text-ellipsis overflow-hidden">
-              <p className="text-smallFont text-start mt-1 break-all">
+              <p className="text-smallFont text-start text-fontBlack mt-1 break-all">
                 {smallContent}
               </p>
             </div>
@@ -41,13 +43,13 @@ export const Post = (props: PostProps) => {
               </p>
               <div className="flex ml-0">
                 <img className="w-5 h-5" src={thumbUp} alt="thumbUp" />
-                <p className="ml-1">{props.likeCount}</p>
+                <p className="ml-1 text-fontBlack">{props.likeCount}</p>
                 <img
                   className="w-5 h-5 ml-4 mt-0.5"
                   src={chatBubble}
                   alt="chatBubble"
                 />
-                <p className="ml-1">{props.commentCount}</p>
+                <p className="ml-1 text-fontBlack">{props.commentCount}</p>
               </div>
             </div>
           </div>
