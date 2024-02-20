@@ -33,7 +33,7 @@ export const FooterNav = () => {
         </li>
         <li className="pr-3.5">
           <a
-            href={PATH_NAME.Message}
+            href={PATH_NAME.MESSAGE}
             onClick={() => selectMode(NAV_MODE.MESSAGE)}
           >
             {navMode == NAV_MODE.MESSAGE ? (
@@ -68,7 +68,7 @@ export const FooterNav = () => {
           </a>
         </li>
         <li className="pr-3.5">
-          <a href="" onClick={() => selectMode(NAV_MODE.MAP)}>
+          <a href={PATH_NAME.MAP} onClick={() => selectMode(NAV_MODE.MAP)}>
             {navMode == NAV_MODE.MAP ? (
               <img src={map_click} className="w-10 h-10" alt={NAV_MODE.MAP} />
             ) : (
