@@ -3,7 +3,6 @@ import { Button, TagButtonList } from "../common/Button";
 import { GenderRadio, NeuterRadio } from "../common/Radio";
 import { SelectDogType } from "../common/SelectBox";
 import { SignUpMiddleTitle } from "../common/Text";
-import dogPencil from "../../assets/MyPage/DogPencil.svg";
 
 interface DogProfileUpdateProps {
   UpdateDogValue: UpdateDogProfileInputType;
@@ -38,11 +37,11 @@ export const DogProfileUpdateTemplate = (props: DogProfileUpdateProps) => {
               backgroundPosition: "center",
             }}
           >
-            <div className="w-full mt-56 flex items-center justify-end ml-5 ">
+            <div className="w-full mt-56 flex items-center justify-end ml-5 z-10">
               <div
                 className="w-10 h-10 rounded-full text-fontBlack text-default cursor-pointer"
                 style={{
-                  backgroundImage: `url(${dogPencil})`,
+                  backgroundImage: `url(../../../public/DogPencil.svg)`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}

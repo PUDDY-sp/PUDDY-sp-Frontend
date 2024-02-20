@@ -10,7 +10,6 @@ import {
   SelectYear,
 } from "../common/SelectBox";
 import { SignUpMiddleTitle } from "../common/Text";
-import inputImage from "../../assets/PostDog/inputImage.svg";
 
 interface PostDogProps {
   postDogValue: PostDogInputType;
@@ -38,7 +37,7 @@ export const PostDogTemplate = (props: PostDogProps) => {
         {props.postDogValue.image === "" ? (
           <div
             className="bg-cover w-36 h-36"
-            style={{ backgroundImage: `url(${inputImage})` }}
+            style={{ backgroundImage: `url(../../../public/inputImage.svg)` }}
           >
             <input
               type="file"
