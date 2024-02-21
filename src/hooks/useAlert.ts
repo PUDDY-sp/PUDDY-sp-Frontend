@@ -25,6 +25,7 @@ export const useAlert = () => {
   }, []);
   const goToProfile = (personId: number) => {
     setPersonId(personId);
+    console.log(personId);
     navigate("/wholike");
   };
 

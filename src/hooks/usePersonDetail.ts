@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { getPersonDetail, postmatch } from "../apis/MatchApi";
 import { MatchType } from "../types/match";
-import { useParams } from "react-router-dom";
 import { useReissueToken } from "./useCommon";
+import usePersonIdStore from "../store/usePersonIdStore";
 
 export const usePersonDetail = () => {
   const { getReissueToken } = useReissueToken();
@@ -21,10 +21,11 @@ export const usePersonDetail = () => {
       tags: [],
     },
   });
-  const { personId } = useParams();
+  const { PersonId } = usePersonIdStore();
 
   useEffect(() => {
-    handleGetPersonDetail(Number(personId));
+    handleGetPersonDetail(Number(PersonId));
+    console.log(PersonId);
   }, []);
 
   const handleGetPersonDetail = (Id: number) => {
