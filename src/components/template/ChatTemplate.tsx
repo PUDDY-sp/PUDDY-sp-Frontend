@@ -93,7 +93,7 @@ export const ChatTemplate = (props: ChatTemplateProps) => {
         </div>
         <div className="flex justify-start items-center w-359 shadow-lg h-43 rounded-20 mb-3 pl-2">
           <input
-            className="w-72 h-5/6 pl-2"
+            className="w-72 h-5/6 pl-2 text-fontBlack"
             placeholder="메세지를 입력하세요..."
             onChange={props.handleInput}
             value={props.content}

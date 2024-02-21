@@ -9,7 +9,7 @@ export interface TagButtonProps {
 export const TagButton = (props: TagButtonProps) => {
   const [clicked, setClicked] = useState(false);
   const style =
-    "rounded-2xl h-6 px-2 mr-2 mb-2 text-smallFont " +
+    "rounded-2xl h-6 px-2 mr-2 mb-2 text-smallFont text-fontBlack" +
     (clicked ? "bg-bgYellow" : "bg-bgGray");
   useEffect(() => {
     if (props.check) {

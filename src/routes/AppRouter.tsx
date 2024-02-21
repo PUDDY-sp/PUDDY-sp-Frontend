@@ -43,7 +43,7 @@ export const AppRouter = () => {
         <Route path="/post-fix/:postId" element={<PostFixPage />} />
         <Route path="/chatlist" element={<ChatListPage />} />
         <Route path="/chat/:chatId" element={<ChatPage />} />
-        <Route path="/wholike:personId" element={<WhoLikeDetailPage />} />
+        <Route path="/wholike" element={<WhoLikeDetailPage />} />
         <Route path="/trail/:trailId/review" element={<TrailListPage />} />
         <Route path="/trail-write/:trailId" element={<TrailWritePage />} />
       </Routes>

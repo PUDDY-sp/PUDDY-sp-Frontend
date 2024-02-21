@@ -12,7 +12,7 @@ export const GenderRadio = (props: GenderRadioProps) => {
         value="true"
         onChange={props.onChange}
       />
-      <p className="text-default ml-1 w-12 text-start">남성</p>
+      <p className="text-default ml-1 w-12 text-start text-fontBlack">남성</p>
       <input
         type="checkbox"
         checked={!props.gender}
@@ -20,7 +20,7 @@ export const GenderRadio = (props: GenderRadioProps) => {
         value="false"
         onChange={props.onChange}
       />
-      <p className="text-default ml-1">여성</p>
+      <p className="text-default ml-1 text-fontBlack">여성</p>
     </div>
   );
 };

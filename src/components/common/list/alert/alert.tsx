@@ -16,7 +16,9 @@ export const Alert = (props: AlertProps) => {
           className="w-10 h-10 mr-1 rounded-full"
           alt="dog"
         />
-        <p className="flex items-center text-middleFont h-10">{message}</p>
+        <p className="flex items-center text-middleFont h-10 text-fontBlack">
+          {message}
+        </p>
       </div>
       <div className="flex justify-end w-full h-7.5 mr-2.5">
         <Button

@@ -12,7 +12,7 @@ export const NeuterRadio = (props: NeuterRadioProps) => {
         value="true"
         onChange={props.onChange}
       />
-      <p className="text-default ml-1 w-12 text-start">Y</p>
+      <p className="text-default ml-1 w-12 text-start text-fontBlack">Y</p>
       <input
         type="radio"
         checked={props.neuter === false}
@@ -20,7 +20,7 @@ export const NeuterRadio = (props: NeuterRadioProps) => {
         value="false"
         onChange={props.onChange}
       />
-      <p className="text-default ml-1">N</p>
+      <p className="text-default ml-1 text-fontBlack">N</p>
     </div>
   );
 };
