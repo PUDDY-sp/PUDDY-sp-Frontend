@@ -35,7 +35,7 @@ export const Comment = (props: CommentProps) => {
             alt="dog"
           />
           <div className="flex flex-col ml-1 w-317 justify-start items-start">
-            <p className="text-default">
+            <p className="text-default text-fontBlack">
               {props.person.dog.name} {gender}
             </p>
             <p className="flex text-smallFont text-fontGray h-4 w-72">
@@ -65,10 +65,12 @@ export const Comment = (props: CommentProps) => {
       </div>
 
       <div className="flex mt-3 mb-1 w-full">
-        <p className="text-smallFont mx-2 text-start">{props.content}</p>
+        <p className="text-smallFont mx-2 text-start text-fontBlack">
+          {props.content}
+        </p>
       </div>
       {isOpen && (
-        <div className="flex z-50 items-center justify-center w-full border">
+        <div className="flex z-50 items-center justify-center w-full border text-fontBlack">
           <div className="flex w-359 bg-white p-1 rounded">
             <InputBox
               style="flex bg-white"

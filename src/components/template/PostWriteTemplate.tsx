@@ -13,7 +13,7 @@ interface PostWriteProps {
 export const PostWriteTemplate = (props: PostWriteProps) => {
   return (
     <div className="h-haveHeaderAndFooter px-4 w-full">
-      <p className="text-start text-middleFont">제목</p>
+      <p className="text-start text-middleFont text-fontBlack">제목</p>
       <InputBox
         style={"bg-bgWhite border-2 w-full "}
         placeholder={""}
@@ -22,7 +22,7 @@ export const PostWriteTemplate = (props: PostWriteProps) => {
         name={"title"}
         onChange={props.onChangeTitle}
       />
-      <p className="mt-3 text-start text-middleFont">내용</p>
+      <p className="mt-3 text-start text-middleFont text-fontBlack">내용</p>
       <textarea
         className={
           "bg-bgWhite border-2 w-full h-340 overflow-auto scrollbar-hide rounded-lg p-1.5 mt-1"
@@ -33,7 +33,7 @@ export const PostWriteTemplate = (props: PostWriteProps) => {
         onChange={props.onChangeContent}
       />
       <Button
-        style="mt-28 w-full bg-bgYellow"
+        style="mt-28 w-full bg-bgYellow text-fontBlack"
         text="작성하기"
         onClick={() =>
           props.onWritePost({ title: props.title, content: props.content })

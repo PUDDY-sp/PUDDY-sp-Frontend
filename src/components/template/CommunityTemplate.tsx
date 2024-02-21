@@ -22,7 +22,7 @@ export const CommunityTemplate = (props: CommunityProps) => {
           text="이전"
           onClick={() => props.onChangePage("prev")}
         />
-        <p className="pt-2.5 mx-20">{props.pageNum}</p>
+        <p className="pt-2.5 mx-20 text-fontBlack">{props.pageNum}</p>
         <Button
           style="ml-3 px-1"
           text="다음"

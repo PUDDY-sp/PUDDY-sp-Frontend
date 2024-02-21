@@ -17,7 +17,7 @@ export const RecommendWalkRoadTemplate = (
         UserLong={props.userLocation.long}
         WalkRoadTypeList={props.walkRoadTypeList}
       />
-      <p>내 위치 : {props.userAddress.mainAddress}</p>
+      <p className="text-fontBlack">내 위치 : {props.userAddress.mainAddress}</p>
     </div>
   );
 };

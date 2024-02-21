@@ -21,10 +21,10 @@ interface SignUpProps {
 }
 export const SignUpTemplate = (props: SignUpProps) => {
   return (
-    <div className="flex flex-col w-full px-4">
+    <div className="flex flex-col w-full px-4 ">
       <div className="flex flex-row w-f h-9">
         <p className="h-f text-fontYellow text-middleTitle">유저 정보</p>
-        <p className="h-f text-middleTitle">를 입력해주세요.</p>
+        <p className="h-f text-fontBlack text-middleTitle">를 입력해주세요.</p>
       </div>
       <SignUpMiddleTitle text={"아이디"} />
       <div className="flex flex-row w-f justify-stretch">

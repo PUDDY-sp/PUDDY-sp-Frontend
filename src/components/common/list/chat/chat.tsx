@@ -18,7 +18,9 @@ export const Chat = (props: ChatProps) => {
           className="w-20 h-20 mr-4 rounded-full"
           alt="dog"
         />
-        <p className="flex items-center text-middleFont h-10">{message}</p>
+        <p className="flex items-center text-middleFont h-10 text-fontBlack">
+          {message}
+        </p>
       </div>
     </div>
   );

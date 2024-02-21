@@ -39,7 +39,7 @@ export const PostTemplate = (props: PostProps) => {
             className="w-9 h-9 mr-1 mt-1 rounded-full"
             alt="dog"
           />
-          <div className="flex flex-col ml-1 w-317 justify-start items-start">
+          <div className="flex flex-col ml-1 w-317 justify-start items-start text-fontBlack">
             <p className="text-default">
               {props.post.person.dog.name} {gender}
             </p>
@@ -68,12 +68,14 @@ export const PostTemplate = (props: PostProps) => {
           )}
         </div>
         <div className="flex flex-col text-ellipsis overflow-hidden">
-          <p className="mt-2 mx-2 text-middleFont text-start ">
+          <p className="mt-2 mx-2 text-middleFont text-start text-fontBlack">
             {props.post.title}
           </p>
         </div>
         <div className="flex flex-col mt-3">
-          <p className="text-smallFont mx-2 text-start">{props.post.content}</p>
+          <p className="text-smallFont mx-2 text-start text-fontBlack">
+            {props.post.content}
+          </p>
         </div>
         <div className="flex mt-4">
           <button
@@ -82,9 +84,9 @@ export const PostTemplate = (props: PostProps) => {
           >
             <img className="w-5 h-5" src={thumbUp} />
           </button>
-          <p className="ml-1">{props.post.likeCount}</p>
+          <p className="ml-1 text-fontBlack">{props.post.likeCount}</p>
           <img className="w-5 h-5 ml-4 mt-1" src={chatBubble} />
-          <p className="ml-1">{props.post.comments.length}</p>
+          <p className="ml-1 text-fontBlack">{props.post.comments.length}</p>
         </div>
         <div className="flex w-full mt-3 mb-4">
           <CommentTemplate
@@ -105,10 +107,10 @@ export const PostTemplate = (props: PostProps) => {
           onChange={props.onCheckComment}
         />
         <button
-          className="ml-2 bg-bgYellow"
+          className="ml-2 bg-bgYellow text-fontBlack text-buttonFont"
           onClick={() => props.onCreateComment(props.post.id, props.comment)}
         >
-          전송
+          등록
         </button>
       </div>
     </div>
