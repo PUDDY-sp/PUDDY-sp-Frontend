@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FooterNav } from "../FooterNav/FooterNav";
 import { Header } from "../Header/header";
 import { EventSourcePolyfill, NativeEventSource } from "event-source-polyfill";
@@ -12,14 +12,22 @@ interface LayoutProps {
 
 export const Layout = (props: LayoutProps) => {
   const EventSource = EventSourcePolyfill || NativeEventSource;
+  const [isLogin, setIsLogin] = useState(false);
   useEffect(() => {
+    if (localStorage.getItem("accessToken")) {
+      setIsLogin(true);
+    }
+  }),
+    [localStorage.getItem("accessToken")];
+  useEffect(() => {
+    if (!isLogin) {
+      return;
+    }
     const source = new EventSource(
       `${import.meta.env.VITE_SERVER_HOST}/api/notification/subscribe`,
       {
         headers: {
           Authorization: `${localStorage.getItem("accessToken")}`,
-          Connection: "keep-alive",
-          Accept: "text/event-stream",
         },
         heartbeatTimeout: 86400000,
       }
@@ -31,7 +39,7 @@ export const Layout = (props: LayoutProps) => {
       alert("매칭 신청이 왔습니다.");
       console.log(e);
     });
-  }, [props.title]);
+  }, [props.title, isLogin]);
   return (
     <div>
       {props.showHeader && <Header title={props.title} />}
