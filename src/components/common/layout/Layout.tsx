@@ -34,6 +34,13 @@ export const Layout = (props: LayoutProps) => {
     );
     source?.addEventListener("connect", (e) => {
       console.log(e);
+      setInterval(() => {
+        source?.dispatchEvent(
+          new MessageEvent("connect", {
+            data: "ping",
+          })
+        );
+      }, 3000);
     });
     source?.addEventListener("addAlert", (e) => {
       alert("매칭 신청이 왔습니다.");
